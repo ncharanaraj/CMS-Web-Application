@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="sub" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="958.0" prefWidth="1712.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.sam">
+   <children>
+      <ImageView fitHeight="1142.0" fitWidth="2011.0" layoutX="-4.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/sky.jpg" />
+         </image></ImageView>
+      <HBox layoutY="20.0" prefHeight="79.0" prefWidth="1712.0" style="-fx-background-color: red;">
+         <children>
+            <Label alignment="CENTER" graphicTextGap="0.0" prefHeight="79.0" prefWidth="1577.0" text="Welcome to  STUDENTBOOK" textAlignment="CENTER" textFill="#1be00b">
+               <font>
+                  <Font name="System Bold Italic" size="42.0" />
+               </font>
+            </Label>
+            <Button blendMode="LIGHTEN" mnemonicParsing="false" onAction="#logout" prefHeight="79.0" prefWidth="134.0" text="LOGOUT">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+         </children></HBox>
+      <Pane fx:id="dash" layoutX="370.0" layoutY="350.0" prefHeight="200.0" prefWidth="293.0" />
+      <Pane fx:id="addpane" layoutX="298.0" layoutY="186.0" prefHeight="696.0" prefWidth="1410.0" style="-fx-background-color: grey;" visible="false">
+         <children>
+            <Label layoutX="492.0" layoutY="-31.0" prefHeight="56.0" prefWidth="468.0" style="-fx-background-color: white;" text="Add Student Information" underline="true">
+               <font>
+                  <Font name="System Bold" size="39.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="487.0" prefHeight="31.0" prefWidth="130.0" text="Gender">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="398.0" prefHeight="31.0" prefWidth="130.0" text="Address">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="348.0" prefHeight="31.0" prefWidth="130.0" text="Phone Number">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="293.0" prefHeight="31.0" prefWidth="130.0" text="Date Of Birth">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="244.0" prefHeight="31.0" prefWidth="130.0" text="Last Name">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="194.0" prefHeight="31.0" prefWidth="130.0" text="First Name">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="141.0" prefHeight="31.0" prefWidth="130.0" text="USN">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="93.0" prefHeight="31.0" prefWidth="130.0" text="Student ID">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Pane fx:id="pane" layoutX="509.0" layoutY="156.0" prefHeight="374.0" prefWidth="873.0" visible="false" />
+            <TextField fx:id="search" layoutX="1149.0" layoutY="83.0" onKeyPressed="#search1" prefHeight="50.0" prefWidth="234.0" promptText="Search By USN" />
+            <HBox layoutX="228.0" layoutY="588.0" prefHeight="80.0" prefWidth="768.0">
+               <children>
+                  <Button blendMode="GREEN" mnemonicParsing="false" onAction="#add1" prefHeight="80.0" prefWidth="150.0" text="Add">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button blendMode="GREEN" mnemonicParsing="false" onAction="#editadd" prefHeight="80.0" prefWidth="150.0" text="Edit">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button blendMode="GREEN" mnemonicParsing="false" onAction="#addedit" prefHeight="80.0" prefWidth="150.0" text="Update">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button blendMode="GREEN" mnemonicParsing="false" onAction="#delete" prefHeight="80.0" prefWidth="150.0" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#view" prefHeight="80.0" prefWidth="145.0" style="-fx-background-color: skyblue;" text="View Student">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox layoutX="228.0" layoutY="83.0" prefHeight="450.0" prefWidth="250.0">
+               <children>
+                  <TextField fx:id="addid" onMouseClicked="#studid" prefHeight="50.0" prefWidth="200.0" promptText="Student ID" />
+                  <TextField fx:id="usn" prefHeight="50.0" prefWidth="200.0" promptText="University Seat Number" />
+                  <TextField fx:id="first1" prefHeight="50.0" prefWidth="200.0" promptText="Firstname" />
+                  <TextField fx:id="last1" prefHeight="50.0" prefWidth="200.0" promptText="Lastname" />
+                  <DatePicker fx:id="dob" prefHeight="50.0" prefWidth="250.0" promptText="Date of Birth" />
+                  <TextField fx:id="phone" prefHeight="50.0" prefWidth="200.0" promptText="Phone Number" />
+                  <TextArea fx:id="address" prefHeight="98.0" prefWidth="200.0" promptText="Address" />
+                  <ChoiceBox fx:id="choice" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: white;" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="scorepane" layoutX="298.0" layoutY="187.0" prefHeight="696.0" prefWidth="1410.0" style="-fx-background-color: gray;" visible="false">
+         <children>
+            <HBox layoutX="227.0" layoutY="514.0" prefHeight="80.0" prefWidth="450.0">
+               <children>
+                  <Button blendMode="GREEN" mnemonicParsing="false" onAction="#add5" prefHeight="80.0" prefWidth="150.0" text="Add" textFill="#1e1d1d">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button blendMode="GREEN" mnemonicParsing="false" onAction="#scoredelete" prefHeight="80.0" prefWidth="150.0" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#add4" prefHeight="80.0" prefWidth="175.0" text="View Result" textFill="#860684">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox layoutX="227.0" layoutY="132.0" prefHeight="305.0" prefWidth="250.0">
+               <children>
+                  <TextField fx:id="scoreid" onMousePressed="#scoreid" prefHeight="50.0" prefWidth="200.0" promptText="id" />
+                  <TextField fx:id="usn1" onKeyReleased="#ashwith" prefHeight="50.0" prefWidth="200.0" promptText="usn" />
+                  <ChoiceBox fx:id="subject" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: white;" />
+                  <TextField fx:id="perc" prefHeight="50.0" prefWidth="200.0" promptText="percentage" />
+                  <TextField fx:id="grade1" prefHeight="50.0" prefWidth="200.0" promptText="grade" />
+                  <TextField fx:id="resu" prefHeight="50.0" prefWidth="200.0" promptText="result" />
+               </children>
+            </VBox>
+            <Label layoutX="623.0" layoutY="-22.0" prefHeight="51.0" prefWidth="335.0" style="-fx-background-color: white;" text="Add Student Result">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+            <Button blendMode="GREEN" layoutX="4.0" layoutY="290.0" mnemonicParsing="false" onAction="#scoreedit" prefHeight="25.0" prefWidth="51.0" text="edit" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Pane fx:id="scorepane3" layoutX="538.0" layoutY="147.0" prefHeight="286.0" prefWidth="860.0" />
+            <Button blendMode="GREEN" layoutX="90.0" layoutY="290.0" mnemonicParsing="false" onAction="#scoreupdate" text="update" visible="false">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Button>
+            <TextField fx:id="searchscore" layoutX="1165.0" layoutY="40.0" onKeyReleased="#searchscore" prefHeight="50.0" prefWidth="234.0" promptText="search by usn" />
+            <Label layoutX="92.0" layoutY="246.0" prefHeight="20.0" prefWidth="100.0" text="Branch">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="90.0" layoutY="301.0" prefHeight="20.0" prefWidth="100.0" text="Percentage">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="90.0" layoutY="348.0" prefHeight="20.0" prefWidth="100.0" text="Grade">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="92.0" layoutY="395.0" prefHeight="20.0" prefWidth="100.0" text="Result">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="92.0" layoutY="190.0" prefHeight="20.0" prefWidth="100.0" text="USN">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="92.0" layoutY="145.0" prefHeight="20.0" prefWidth="100.0" text="Student ID">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="activepane" layoutX="298.0" layoutY="187.0" prefHeight="696.0" prefWidth="1410.0" style="-fx-background-color: gray;" visible="false">
+         <children>
+            <TextField fx:id="actid" layoutX="60.0" layoutY="54.0" onMousePressed="#actid" prefHeight="25.0" prefWidth="175.0" promptText="id" />
+            <TextField fx:id="usn3" layoutX="59.0" layoutY="89.0" prefHeight="25.0" prefWidth="175.0" promptText="usn" />
+            <TextField fx:id="sports3" layoutX="59.0" layoutY="127.0" prefHeight="25.0" prefWidth="175.0" promptText="sports particepated" />
+            <TextField fx:id="cultu3" layoutX="58.0" layoutY="164.0" prefHeight="25.0" prefWidth="175.0" promptText="cultural event  particepated" />
+            <TextField fx:id="feast3" layoutX="59.0" layoutY="201.0" prefHeight="25.0" prefWidth="175.0" promptText="fest attended" />
+            <DatePicker fx:id="date3" layoutX="82.0" layoutY="239.0" prefHeight="25.0" prefWidth="149.0" promptText="date" />
+            <Button blendMode="GREEN" layoutX="177.0" layoutY="284.0" mnemonicParsing="false" onAction="#activeadd" prefHeight="25.0" prefWidth="56.0" text="add">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="40.0" layoutY="239.0" prefHeight="25.0" prefWidth="28.0" text="on" textFill="#e40404">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label alignment="CENTER" layoutX="46.0" layoutY="4.0" prefHeight="44.0" prefWidth="221.0" text="Add Activity" textFill="#b90909">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button blendMode="GREEN" layoutX="71.0" layoutY="329.0" mnemonicParsing="false" onAction="#actedit" prefHeight="25.0" prefWidth="56.0" text="edit">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button blendMode="GREEN" layoutX="71.0" layoutY="284.0" mnemonicParsing="false" onAction="#actdelete" text="delete">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button blendMode="GREEN" layoutX="181.0" layoutY="325.0" mnemonicParsing="false" onAction="#actupdate" text="update">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="526.0" layoutY="24.0" mnemonicParsing="false" onAction="#viewactive" prefHeight="30.0" prefWidth="122.0" text="view activity" textFill="#830372">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="actsearch" layoutX="819.0" layoutY="26.0" onKeyReleased="#actsearch" promptText="search by usn" />
+            <Pane fx:id="activitypane4" prefHeight="501.0" prefWidth="906.0" visible="false" />
+         </children>
+      </Pane>
+      <Pane fx:id="subscore" layoutX="298.0" layoutY="186.0" prefHeight="696.0" prefWidth="1410.0" style="-fx-background-color: gray;" visible="false">
+         <children>
+            <TextField fx:id="subid" layoutX="64.0" layoutY="36.0" onMouseClicked="#subidinc" promptText="id" />
+            <TextField fx:id="subusn" layoutX="64.0" layoutY="65.0" promptText="usn" />
+            <ChoiceBox fx:id="subbranch" layoutX="63.0" layoutY="92.0" prefWidth="150.0" />
+            <TextField fx:id="sub1" layoutX="63.0" layoutY="122.0" onKeyReleased="#sub1" />
+            <TextField fx:id="sub2" layoutX="64.0" layoutY="156.0" onKeyReleased="#sub2" />
+            <TextField fx:id="sub3" layoutX="64.0" layoutY="190.0" onKeyReleased="#sub3" />
+            <TextField fx:id="sub4" layoutX="64.0" layoutY="223.0" onKeyReleased="#sub4" />
+            <TextField fx:id="sub5" layoutX="64.0" layoutY="258.0" onKeyReleased="#sub5" />
+            <TextField fx:id="sub6" layoutX="65.0" layoutY="293.0" onKeyReleased="#sub6" />
+            <TextField fx:id="total" layoutX="63.0" layoutY="328.0" onKeyReleased="#total" />
+            <TextField fx:id="subperc" layoutX="65.0" layoutY="364.0" onKeyReleased="#perctge" />
+            <TextField fx:id="grade2" layoutX="63.0" layoutY="400.0" visible="false" />
+            <TextField fx:id="resu2" layoutX="65.0" layoutY="434.0" visible="false" />
+            <Button layoutX="60.0" layoutY="470.0" mnemonicParsing="false" onAction="#subadd" prefHeight="25.0" prefWidth="52.0" text="add" textFill="#d70ed0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="60.0" layoutY="508.0" mnemonicParsing="false" onAction="#marksedit" prefHeight="25.0" prefWidth="51.0" text="edit" textFill="#dd0ccc">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="160.0" layoutY="508.0" mnemonicParsing="false" onAction="#marksupdate" text="update" textFill="#dd07c8">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="159.0" layoutY="473.0" mnemonicParsing="false" onAction="#marksdelete" prefHeight="25.0" prefWidth="57.0" text="delete" textFill="#e60ffa">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="522.0" layoutY="4.0" mnemonicParsing="false" onAction="#subview" prefHeight="37.0" prefWidth="149.0" text="view score" textFill="#cd009d">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="marksearch" layoutX="796.0" layoutY="9.0" onKeyReleased="#markssearch" promptText="search by usn" />
+            <Label layoutX="62.0" layoutY="5.0" prefHeight="30.0" prefWidth="164.0" text="add marks" textFill="#ee0808">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="124.0" prefHeight="24.0" prefWidth="37.0" text="sub1" textFill="#e80606">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="161.0" text="sub2" textFill="#f80909">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="195.0" text="sub3" textFill="#e10909">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="228.0" text="sub4" textFill="#e80606">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="261.0" text="sub5" textFill="#eb0707">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="296.0" text="sub6" textFill="#e10e0e">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="331.0" prefHeight="19.0" prefWidth="35.0" text="total" textFill="#e80505">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="367.0" prefHeight="19.0" prefWidth="57.0" text="perctge" textFill="#f20303">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="100.0" text="branch" textFill="#ed090e">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Pane fx:id="makspane" layoutX="229.0" layoutY="46.0" prefHeight="759.0" prefWidth="1266.0" />
+            <Label layoutX="23.0" layoutY="402.0" text="grade" textFill="#f20808" visible="false">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="437.0" text="result" textFill="#fc0303" visible="false">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox layoutX="36.0" layoutY="350.0" prefHeight="350.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="dashboard" mnemonicParsing="false" onAction="#dashboard" prefHeight="70.0" prefWidth="200.0" text="Dashboard">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#add2" prefHeight="70.0" prefWidth="200.0" text="Add New student">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addmarks" prefHeight="70.0" prefWidth="200.0" text="Add Score">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#activityadd" prefHeight="70.0" prefWidth="200.0" text="Add Activity">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#add3" prefHeight="70.0" prefWidth="200.0" text="Add Result">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
