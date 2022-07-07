@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="controlsfx-8.40.12">
+    <CLASSES>
+      <root url="jar://G:/MITRA SOFTWARE/JARS/controlsfx-8.40.12.jar!/" />
+      <root url="jar://G:/MITRA SOFTWARE/JARS/itextpdf-5.5.9.jar!/" />
+      <root url="jar://G:/MITRA SOFTWARE/JARS/jfoenix.jar!/" />
+      <root url="jar://G:/MITRA SOFTWARE/JARS/mysql-connector-java-5.0.8-bin.jar!/" />
+      <root url="jar://G:/MITRA SOFTWARE/jars_1/com.businessrefinery.barcode.jar!/" />
+      <root url="jar://G:/MITRA SOFTWARE/jars_1/controlsfx-8.40.12.jar!/" />
+      <root url="jar://G:/MITRA SOFTWARE/jars_1/itextpdf-5.5.9.jar!/" />
+      <root url="jar://G:/MITRA SOFTWARE/jars_1/jfoenix.jar!/" />
+      <root url="jar://G:/MITRA SOFTWARE/jars_1/json-simple-1.1.1.jar!/" />
+      <root url="jar://G:/MITRA SOFTWARE/jars_1/mysql-connector-java-5.0.8-bin.jar!/" />
+      <root url="jar://G:/MITRA SOFTWARE/jars_1/poi-3.13-20150929.jar!/" />
+      <root url="jar://G:/MITRA SOFTWARE/jars_1/poi-ooxml-3.13-20150929.jar!/" />
+      <root url="jar://G:/MITRA SOFTWARE/jars_1/poi-ooxml-schemas-3.13-20150929.jar!/" />
+      <root url="jar://G:/MITRA SOFTWARE/jars_1/sqlite-jdbc-3.19.3.jar!/" />
+      <root url="jar://G:/MITRA SOFTWARE/jars_1/xmlbeans-2.6.0.jar!/" />
+      <root url="file://G:/MITRA SOFTWARE/jars_1/lib" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://G:/MITRA SOFTWARE/jars_1/xmlworker-5.5.9-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://G:/MITRA SOFTWARE/jars_1/lib" />
+    </SOURCES>
+    <jarDirectory url="file://G:/MITRA SOFTWARE/jars_1/lib" recursive="false" />
+    <jarDirectory url="file://G:/MITRA SOFTWARE/jars_1/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>
